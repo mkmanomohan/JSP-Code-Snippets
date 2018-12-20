@@ -1,0 +1,27 @@
+Add System out for a JSTL variable
+-----------------------------------
+
+	<%
+		String mano2 = "searchProfile mano2-->   "; 
+		mano2 = mano2 + (String)pageContext.getAttribute("searchProfile");   //Mano
+		System.out.println(mano2);
+	%>
+
+
+	<%
+		String mano3 = " mano3-->   "; 
+		mano3 = mano3 + " newManufacturer " + (String)request.getAttribute("newManufacturer") + ", intentSearchTerm " + (String)request.getAttribute("intentSearchTerm")
+				+ ", newSearchTerm " + (String)request.getAttribute("newSearchTerm") + ", newFilterTerm " + (String)request.getAttribute("newFilterTerm") + ", newAdvancedFacetList "
+				+  (String)request.getAttribute("newAdvancedFacetList") + ", brandSearch " +  (String)pageContext.getAttribute("brandSearch");   
+				
+		System.out.println(mano3);
+	%>
+
+
+Patter matching (Contains) using JSTL
+---------------------------------------
+
+	<c:if test="${!fn:contains(brandExpr, '"')}">
+		<% System.out.println("Not contain double quote.."); %>
+		 <c:set var="brandExpr" value='"${brandExpr}"'></c:set>
+	</c:if>
