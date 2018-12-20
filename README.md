@@ -1,2 +1,2 @@
-# first-sample-repo
-This is the first sample repository
+# JSP Code Snippets
+This have contains the files whcih have small jsp  snippets.
